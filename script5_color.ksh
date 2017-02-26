@@ -7,16 +7,16 @@
 #If the user enters any other color, 
 #tihen enter that the color is not in any of the categories defined
 
-echo enter a color 
+print enter a color 
 read color
 case $color in 
 bl* | Bl*)
- echo the sky color is $color; 
+ print the sky color is $color; 
   ;;
   [Rr]ed | [Yy]ellow)
-  echo the sun is sometimes this color 
+  print the sun is sometimes this color 
   ;;
   *) 
-  echo $color is not part of this category
+  print  $color is not part of this category
 esac
 

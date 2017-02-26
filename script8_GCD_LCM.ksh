@@ -7,19 +7,18 @@ gcd(){
 	set -- "$2" "`expr "$1" % "$2"`"
 	done 
 	test 0 -gt "$1" && set -- " `expr 0 - "$1"`" 
-	echo "$1"
+	print "$1"
 }
 lcm(){
 	set -- "$1" "$2" "`gcd "$1" "$2"`" 
 	set -- "`expr "$1" \* "$2" / "$3"`"
 	test 0 -gt "$1" && set -- "`expr 0 - "$1"`" 
-	echo "$1"
+	print "$1"
 }
-echo "enter two integers" 
-echo number 1
-read first
-echo number 2
-read second
+echo number 1 $1
+first=$1
+echo number 2 $2
+second=$2
 
 if [ $first -lt 0 -o $second -lt 0 ] 
 then 

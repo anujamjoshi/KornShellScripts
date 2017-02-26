@@ -6,7 +6,7 @@ echo "enter number: "
 read n
 let remainder=$n%2
 #echo $remainder  
-if [[ $remainder -eq 0 ]] 
+if [[ $remainder == 0 ]] 
 then 
 	echo "$n is even" 
 else 

@@ -5,5 +5,5 @@
 #using a loop and prints each one out in a separate line. 
 for d in $(date)
 do
-	echo $d
+	print $d
 done

@@ -16,27 +16,27 @@ fi
 }
 sum(){
 	if [ "$1" -gt "0" ]; then	
-	i=`expr $1 - 1`
-	j=`sum $i`
-	k=`expr $1 + $j`
-	echo $k
+		i=`expr $1 - 1`
+		j=`sum $i`
+		k=`expr $1 + $j`
+		print $k
 	else
-	echo 0
+		echo 0
 	fi
 }
-echo "Enter a number between 1 and 10"
+while (true)
+do
+print "Enter a number between 1 and 10 or anything else to exit"
 read number
 if [ "$number" -ge 1 -a "$number" -le 10 ]
 then
-#echo "$number cool"
-echo -n "factorial: "
+        print -n "factorial: "
+        factorial $number
+        print -n "sum: "
+        sum $number
 
-factorial $number
-echo -n "sum: "
-sum $number
-break
 else
-echo "wrong input"
-exit 0
+        print "wrong input"
+        exit
 fi
-
+done

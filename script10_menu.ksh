@@ -1,4 +1,20 @@
-#!/bin/sh
+#!/bin/ksh
+#Author: Anuja Joshi 
+# Write a script in both Bourne and C shell that presents a user with a menu as follows:
+#Add the numbers (enter a or A)
+#Subtract the numbers (enter s or S)
+#Multiply the numbers (enter m or M)
+#Divide the numbers (enter d or D)
+#Exit (select e or E)
+#If the user enters any other character other than the ones mentioned, 
+#then print an error saying it is not a choice and ask the user to select again until the correct option is chosen.
+#Once the operation is done, 
+#ask the user if they want to do another operation on the same two integers 
+#or do another operation with two different integers or exit. 
+#Do accordingly based on the users choice.  
+#So until the user does not select the exit option, 
+#the user is  presented with a menu. 
+#Also, when you run the script, provide two integers as command line arguments
 if [ $# -gt 2 -o $# -lt 2 ] 
 then 
 echo incorrect number of arguments 
